@@ -1,0 +1,19 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "audit": "lerna-audit",
+    "build": "lerna run build",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "format:check:package": "prettier --check \"packages/${PACKAGE}/**/*\"",
+    "lerna": "lerna",
+    "lint": "lerna run lint",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@valueadd/dev": "^5.1.0",
+    "lerna": "^3.22.1",
+    "prettier": "^2.1.2"
+  }
+}
