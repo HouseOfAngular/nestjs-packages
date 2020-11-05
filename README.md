@@ -5,9 +5,9 @@
 
 A collection of packages, modules and utilities for NestJS.
 
-| Package | Description | Version | Changelog |
-| ------- | ----------- | ------- | --------- |
-
+| Package                                     | Description                                                               | Version                                                                                                                           | Changelog                                     |
+| ------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| [`@valueadd/download`](./packages/download) | NestJS module that allows to stream the file content from the controller. | [![version](https://img.shields.io/npm/v/@valueadd/nestjs-download.svg)](https://www.npmjs.com/package/@valueadd/nestjs-download) | [changelog](./packages/download/CHANGELOG.md) |
 
 ## Development
 

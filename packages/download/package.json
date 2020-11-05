@@ -1,0 +1,41 @@
+{
+  "name": "@valueadd/nestjs-download",
+  "version": "0.0.0",
+  "description": "NestJS module that allows to stream the file content from the controller.",
+  "keywords": [
+    "nestjs",
+    "NestJS"
+  ],
+  "homepage": "https://github.com/valueadd-poland/nestjs-packages",
+  "bugs": {
+    "url": "https://github.com/valueadd-poland/nestjs-packages/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valueadd-poland/nestjs-packages.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "ValueAdd sp. z o.o.",
+    "email": "contact@valueadd.pl",
+    "url": "https://valueadd.pl/"
+  },
+  "main": "./dist/cjs/index.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc --build tsconfig.lib.json",
+    "lint": "eslint src/**/**",
+    "test": "jest",
+    "preversion": "npm run build"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^7.4.4",
+    "@nestjs/platform-express": "^7.4.4"
+  }
+}
