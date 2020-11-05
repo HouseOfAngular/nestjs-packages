@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": true,
+    "removeComments": false,
+    "strict": true,
+    "strictNullChecks": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2017",
+    "lib": ["es7"],
+    "baseUrl": "./src",
+    "paths": {
+      "@valueadd/*": ["./*/src"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
