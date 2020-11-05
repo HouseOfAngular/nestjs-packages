@@ -5,7 +5,6 @@
     "target": "es2015",
     "module": "commonjs",
     "moduleResolution": "node",
-    "declaration": false,
     "sourceMap": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
