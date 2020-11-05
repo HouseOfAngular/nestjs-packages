@@ -28,7 +28,7 @@
       'always',
       ['build', 'chore', 'ci', 'docs', 'deps', 'feat', 'fix', 'perf', 'refactor', 'style', 'test']
     ],
-    'scope-enum': [2, 'always', ['release', 'download']]
+    'scope-enum': [2, 'always', ['release', 'streaming']]
   },
   prettier: {
     // extensions to check with prettier
