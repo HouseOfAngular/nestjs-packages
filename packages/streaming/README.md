@@ -1,25 +1,25 @@
-# @valueadd/nestjs-download
+# @valueadd/nestjs-streaming
 
-[![version](https://img.shields.io/npm/v/@valueadd/nestjs-download.svg)](https://www.npmjs.com/package/@valueadd/nestjs-download)
-[![downloads](https://img.shields.io/npm/dt/@valueadd/nestjs-download.svg)](https://www.npmjs.com/package/@valueadd/nestjs-download)
+[![version](https://img.shields.io/npm/v/@valueadd/nestjs-streaming.svg)](https://www.npmjs.com/package/@valueadd/nestjs-streaming)
+[![downloads](https://img.shields.io/npm/dt/@valueadd/nestjs-streaming.svg)](https://www.npmjs.com/package/@valueadd/nestjs-streaming)
 
-NestJS module that allows to stream the file content from the controller.
+Useful providers that allows working with streaming like responses
 
 ## Installation
 
-`npm install --save-dev @valueadd/nestjs-download`
+`npm install --save-dev @valueadd/nestjs-streaming`
 
 ## Usage
 
 #### **`app.controller.ts`**
 
 ```ts
-import { Controller, Get, Headers, Inject, Param, Res } from '@nestjs/common';
+import { Controller, Get, Inject, Res } from '@nestjs/common';
 import {
   ResponseStreamerFactory,
   responseStreamerFactoryToken,
   StreamingType
-} from '@valueadd/nestjs-download';
+} from '@valueadd/nestjs-streaming';
 
 @Controller()
 export class AppController {
@@ -43,7 +43,7 @@ export class AppController {
 
 ```ts
 import { Module } from '@nestjs/common';
-import { DownloadExpressModule } from '@valueadd/nestjs-download';
+import { DownloadExpressModule } from '@valueadd/nestjs-streaming';
 import { AppController } from './app.controller';
 
 @Module({
