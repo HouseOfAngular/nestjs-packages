@@ -18,5 +18,5 @@ A collection of packages, modules and utilities for NestJS.
 
 ### Publish packages
 
-- `npm run lerna version -- --conventional-graduate`
+- `npm run lerna version -- --conventional-commits`
 - `npm run lerna publish from-git`
