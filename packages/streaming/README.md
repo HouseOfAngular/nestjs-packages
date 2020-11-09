@@ -9,7 +9,19 @@ Useful providers that allows working with streaming like responses
 
 `npm install --save-dev @valueadd/nestjs-streaming`
 
+## Available modules
+
+- DownloadExpressModule
+- StreamingExpressModule
+- UrlStreamerNativeModule
+
 ## Usage
+
+Download nad Streaming modules provide services that pass your stream as a response and set headers appropriate for each case.
+
+UrlStreamer provide a service that allows you to easily get the url as a stream.
+
+#### Example
 
 #### **`app.controller.ts`**
 

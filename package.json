@@ -9,6 +9,7 @@
     "format:write": "prettier --write .",
     "lerna": "lerna",
     "lint": "lerna run lint",
+    "postinstall": "npm run lerna bootstrap",
     "test": "jest"
   },
   "devDependencies": {

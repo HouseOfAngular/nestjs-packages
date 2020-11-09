@@ -42,6 +42,9 @@
     "@nestjs/common": "^7.4.4",
     "@nestjs/platform-express": "^7.4.4"
   },
+  "devDependencies": {
+    "stream-mock": "^2.0.5"
+  },
   "publishConfig": {
     "access": "public"
   }
