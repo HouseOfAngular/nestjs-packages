@@ -1,6 +1,6 @@
 {
   "name": "@valueadd/nestjs-ng-pdf-generator",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0",
   "description": "Pdf generator with for NestJS with templates based on Angular",
   "keywords": [
     "pdf",
