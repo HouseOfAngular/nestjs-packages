@@ -1,0 +1,1 @@
+export const PDF_GENERATOR_OPTIONS = Symbol('PDF_GENERATOR_OPTIONS');
