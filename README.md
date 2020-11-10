@@ -5,9 +5,10 @@
 
 A collection of packages, modules and utilities for NestJS.
 
-| Package                                            | Description                                                        | Version                                                                                                                             | Changelog                                    |
-| -------------------------------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| [`@valueadd/nestjs-streaming`](packages/streaming) | Useful providers that allows working with streaming like responses | [![version](https://img.shields.io/npm/v/@valueadd/nestjs-streaming.svg)](https://www.npmjs.com/package/@valueadd/nestjs-streaming) | [changelog](packages/streaming/CHANGELOG.md) |
+| Package                                                       | Description                                                        | Version                                                                                                                                           | Changelog                                        |
+| ------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| [`@valueadd/nestjs-streaming`](packages/streaming)            | Useful providers that allows working with streaming like responses | [![version](https://img.shields.io/npm/v/@valueadd/nestjs-streaming.svg)](https://www.npmjs.com/package/@valueadd/nestjs-streaming)               | [changelog](packages/streaming/CHANGELOG.md)     |
+| [`@valueadd/nestjs-ng-pdf-generator`](packages/pdf-generator) | Extension to the @nestjs/ng-universal with pdf-generator api       | [![version](https://img.shields.io/npm/v/@valueadd/nestjs-ng-pdf-generator.svg)](https://www.npmjs.com/package/@valueadd/nestjs-ng-pdf-generator) | [changelog](packages/pdf-generator/CHANGELOG.md) |
 
 ## Development
 
