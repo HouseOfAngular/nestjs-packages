@@ -1,0 +1,61 @@
+{
+  "name": "@valueadd/nestjs-ng-pdf-generator",
+  "version": "0.0.0",
+  "description": "Pdf generator with for NestJS with templates based on Angular",
+  "keywords": [
+    "pdf",
+    "nestjs",
+    "angular",
+    "angular-universal"
+  ],
+  "homepage": "https://github.com/valueadd-poland/nestjs-packages",
+  "bugs": {
+    "url": "https://github.com/valueadd-poland/nestjs-packages/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valueadd-poland/nestjs-packages.git"
+  },
+  "license": "MIT",
+  "author": "Maciej Sikorski <maciejsikorski00@gmail.com>",
+  "main": "dist/cjs/index.js",
+  "typings": "dist/cjs/index.d.ts",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc --build tsconfig.lib.json",
+    "lint": "eslint src/**/**",
+    "test": "jest",
+    "preversion": "npm run build"
+  },
+  "dependencies": {
+    "@nestjs/ng-universal": "^3.2.0",
+    "@nguniversal/express-engine": "^9.1.1",
+    "@valueadd/nestjs-streaming": "0.1.0",
+    "puppeteer": "^5.2.1"
+  },
+  "devDependencies": {
+    "@angular/common": "9.1.12",
+    "@angular/core": "9.1.12",
+    "@angular/platform-server": "9.1.0",
+    "@types/puppeteer": "^3.0.1"
+  },
+  "peerDependencies": {
+    "@angular/animations": "^9.1.0",
+    "@angular/common": "^9.0.1",
+    "@angular/platform-server": "^9.0.1",
+    "@nestjs/common": "^7.0.0",
+    "@nestjs/core": "^7.0.0",
+    "@nestjs/platform-express": "^7.0.0",
+    "@nguniversal/common": "^9.0.1",
+    "@nguniversal/express-engine": "^9.0.1",
+    "express": "^4.17.1",
+    "zone.js": "^0.10.0 || ^0.11.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
