@@ -1,4 +1,4 @@
-import { DownloadableResource } from '../interfaces/downloadable-resource';
+import { DownloadableResource } from './downloadable-resource';
 
 export abstract class DownloadProvider {
   /**

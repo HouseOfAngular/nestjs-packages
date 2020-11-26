@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
-import {
-  downloadProviderExpressFactory,
-  downloadProviderFactoryToken
-} from './download-provider-express.factory';
+import { downloadProviderFactoryToken } from '../shared/interfaces/download-provider.factory';
+import { downloadProviderExpressFactory } from './download-provider-express.factory';
 
 @Module({
   providers: [
