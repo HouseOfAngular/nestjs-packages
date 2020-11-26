@@ -1,6 +1,6 @@
 {
   "name": "@valueadd/nestjs-ng-pdf-generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pdf generator with for NestJS with templates based on Angular",
   "keywords": [
     "pdf",
@@ -34,7 +34,7 @@
   "dependencies": {
     "@nestjs/ng-universal": "^3.2.0",
     "@nguniversal/express-engine": "^9.1.1",
-    "@valueadd/nestjs-streaming": "0.1.0",
+    "@valueadd/nestjs-streaming": "^0.2.0",
     "puppeteer": "^5.2.1"
   },
   "devDependencies": {
