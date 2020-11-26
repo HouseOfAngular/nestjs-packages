@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
-import {
-  responseStreamerFactory,
-  responseStreamerFactoryToken
-} from './response-streaming/response-streamer.factory';
+import { responseStreamerFactoryToken } from '../shared/interfaces/response-streamer.factory';
+import { responseStreamerFactory } from './response-streaming/response-streamer.factory';
 
 @Module({
   providers: [
