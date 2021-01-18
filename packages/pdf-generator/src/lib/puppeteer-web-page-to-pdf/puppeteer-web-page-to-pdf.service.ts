@@ -14,6 +14,8 @@ export class PuppeteerWebPageToPdfService {
   async toPdf(url: URL, options: ToPdfOptions): Promise<ToPdfResult> {
     const browser = await puppeteer.launch({
       args: [
+        // Disable cors checks
+        '--disable-web-security',
         // Required for Docker version of Puppeteer
         '--no-sandbox',
         '--disable-setuid-sandbox',
