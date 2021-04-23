@@ -1,0 +1,54 @@
+{
+  "name": "@valueadd/nestjs-architect",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": {
+    "name": "ValueAdd sp. z o.o.",
+    "email": "contact@valueadd.pl",
+    "url": "https://valueadd.pl/"
+  },
+  "homepage": "https://github.com/valueadd-poland/nestjs-packages#readme",
+  "license": "ISC",
+  "main": "lib/architect.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "nestjs",
+    "onion architecture",
+    "clean architecture",
+    "nx",
+    "schematics"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valueadd-poland/nestjs-packages.git"
+  },
+  "scripts": {
+    "compileSchema": "node json-schema-to-ts.js",
+    "prebuild": "rm -rf dist",
+    "build": "tsc -p ./tsconfig.lib.json",
+    "postbuild": "cpy --cwd=src --parents '**/*.json' ../dist/cjs",
+    "schematics": "schematics",
+    "test": "jest"
+  },
+  "schematics": "./dist/cjs/collection.json",
+  "bugs": {
+    "url": "https://github.com/valueadd-poland/nestjs-packages/issues"
+  },
+  "dependencies": {
+    "@angular-devkit/core": "^11.2.0",
+    "@angular-devkit/schematics": "^11.2.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/schematics-cli": "^0.1102.0",
+    "cpy-cli": "^3.1.1",
+    "json-schema-to-typescript": "^10.1.3"
+  }
+}
