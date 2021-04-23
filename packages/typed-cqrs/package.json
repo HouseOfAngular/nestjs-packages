@@ -1,5 +1,5 @@
 {
-  "name": "typed-cqrs",
+  "name": "@nestjs-architects/typed-cqrs",
   "version": "1.0.0",
   "description": "Enhance @nestjs/cqrs building blocks with auto-inferring types.",
   "main": "dist/index.js",
@@ -13,15 +13,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/valueadd-poland/nestjs-typed-cqrs.git"
+    "url": "git+https://github.com/valueadd-poland/nestjs-packages.git",
+    "directory": "packages/typed-cqrs"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/valueadd-poland/nestjs-typed-cqrs/issues"
+  "author": {
+    "name": "ValueAdd sp. z o.o.",
+    "email": "contact@valueadd.pl",
+    "url": "https://valueadd.pl/"
   },
-  "homepage": "https://github.com/valueadd-poland/nestjs-typed-cqrs#readme",
+  "license": "MIT",
+  "homepage": "https://github.com/valueadd-poland/nestjs-packages",
+  "bugs": {
+    "url": "https://github.com/valueadd-poland/nestjs-packages/issues"
+  },
   "peerDependencies": {
     "@nestjs/common": "^7.6.0",
     "@nestjs/core": "^7.6.0",
