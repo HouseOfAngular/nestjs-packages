@@ -5,8 +5,9 @@ Tried of hand-typing types for NestJS CQRS package? We got you covered!
 # Usage
 
 All you need to do, is to extend your query with type of expected response.
+
 ```typescript
-import {Query} from '@valueadd/nestjs-typed-cqrs';
+import { Query } from '@valueadd/nestjs-typed-cqrs';
 
 export class GetProfileQuery extends Query<ResultType> {}
 ```
@@ -18,18 +19,14 @@ Now, when implementing handler, you get all type completion & safety!
 ![showcase-handler](typed-handler.gif)
 
 ```typescript
-import {IInferringQueryHandler, QueryHandler} from '@nestjs/cqrs';
-
+import { IInferringQueryHandler, QueryHandler } from '@nestjs/cqrs';
 
 @QueryHandler(GetProfileQuery)
-export class GetProfileHandler
-    implements IInferringQueryHandler<GetProfileQuery> {
-}
+export class GetProfileHandler implements IInferringQueryHandler<GetProfileQuery> {}
 ```
 
 As well as, results are correctly typed as well!
 ![showcase-handler](typed-outcome.gif)
-
 
 # Development - verify if package works
 

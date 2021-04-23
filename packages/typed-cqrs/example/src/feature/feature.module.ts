@@ -6,6 +6,6 @@ import { SomeHandler } from './some-handler';
 
 @Module({
   imports: [CqrsModule],
-  providers: [SomeHandler, SomeCommandHandler],
+  providers: [SomeHandler, SomeCommandHandler]
 })
 export class FeatureModule {}
