@@ -1,0 +1,53 @@
+{
+  "name": "@nestjs-architects/typed-cqrs",
+  "version": "0.0.0",
+  "description": "Enhance the @nestjs/cqrs building blocks with auto-inferring types.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "cd .. && cd .. && husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valueadd-poland/nestjs-packages.git",
+    "directory": "packages/typed-cqrs"
+  },
+  "keywords": [],
+  "author": {
+    "name": "ValueAdd sp. z o.o.",
+    "email": "contact@valueadd.pl",
+    "url": "https://valueadd.pl/"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/valueadd-poland/nestjs-packages",
+  "bugs": {
+    "url": "https://github.com/valueadd-poland/nestjs-packages/issues"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^7.6.0",
+    "@nestjs/core": "^7.6.0",
+    "@nestjs/cqrs": "^7.0.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.4.0"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^7.6.0",
+    "@nestjs/core": "^7.6.0",
+    "@nestjs/cqrs": "^7.0.1",
+    "git-format-staged": "2.1.1",
+    "husky": "6.0.0",
+    "prettier": "2.2.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.4.0",
+    "typescript": "4.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "git-format-staged -f 'prettier --ignore-unknown --stdin --stdin-filepath \"{}\"' ."
+    }
+  }
+}
