@@ -1,6 +1,6 @@
 {
   "name": "@nestjs-architects/typed-cqrs",
-  "version": "0.0.0",
+  "version": "0.1.0-alpha.0",
   "description": "Enhance the @nestjs/cqrs building blocks with auto-inferring types.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
