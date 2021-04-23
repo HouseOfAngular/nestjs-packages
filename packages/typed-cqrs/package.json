@@ -1,0 +1,48 @@
+{
+  "name": "nestjs-typed-cqrs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valueadd-poland/nestjs-typed-cqrs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valueadd-poland/nestjs-typed-cqrs/issues"
+  },
+  "homepage": "https://github.com/valueadd-poland/nestjs-typed-cqrs#readme",
+  "peerDependencies": {
+    "@nestjs/common": "^7.6.0",
+    "@nestjs/core": "^7.6.0",
+    "@nestjs/cqrs": "^7.0.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.4.0"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^7.6.0",
+    "@nestjs/core": "^7.6.0",
+    "@nestjs/cqrs": "^7.0.1",
+    "git-format-staged": "2.1.1",
+    "husky": "6.0.0",
+    "prettier": "2.2.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.4.0",
+    "typescript": "4.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "git-format-staged -f 'prettier --ignore-unknown --stdin --stdin-filepath \"{}\"' ."
+    }
+  }
+}
