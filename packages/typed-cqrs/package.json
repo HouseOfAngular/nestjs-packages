@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepare": "husky install"
+    "prepare": "cd .. && cd .. && husky install"
   },
   "repository": {
     "type": "git",
