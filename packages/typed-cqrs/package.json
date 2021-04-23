@@ -49,5 +49,8 @@
     "hooks": {
       "pre-commit": "git-format-staged -f 'prettier --ignore-unknown --stdin --stdin-filepath \"{}\"' ."
     }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
