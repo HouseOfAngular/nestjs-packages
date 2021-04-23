@@ -12,7 +12,7 @@ declare module '@nestjs/cqrs' {
         execute<X>(query: Query<X>): Promise<X>;
     }
 
-    export type IInferringQueryHandler<
+    export type IInferredQueryHandler<
         QueryType extends Query<unknown>
         > = QueryType extends Query<infer ResultType>
         ? IQueryHandler<QueryType, ResultType>
@@ -23,7 +23,7 @@ declare module '@nestjs/cqrs' {
         execute<X>(command: Command<X>): Promise<X>;
     }
 
-    export type IInferringCommandHandler<
+    export type IInferredCommandHandler<
         CommandType extends Command<unknown>
         > = CommandType extends Command<infer ResultType>
         ? ICommandHandler<CommandType, ResultType>
