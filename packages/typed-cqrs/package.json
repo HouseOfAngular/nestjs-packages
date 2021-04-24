@@ -5,11 +5,14 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "lib"
+    "dist",
+    "package.json",
+    "README.md"
   ],
   "scripts": {
-    "build": "tsc",
-    "prepare": "cd .. && cd .. && husky install"
+    "build": "rm -rf dist && tsc",
+    "prepare": "cd .. && cd .. && husky install",
+    "preversion": "npm run build"
   },
   "repository": {
     "type": "git",

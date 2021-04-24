@@ -3,7 +3,6 @@
 [![version](https://img.shields.io/npm/v/@nestjs-architects/typed-cqrs.svg)](https://www.npmjs.com/package/@nestjs-architects/typed-cqrs)
 [![downloads](https://img.shields.io/npm/dt/@nestjs-architects/typed-cqrs.svg)](https://www.npmjs.com/package/@nestjs-architects/typed-cqrs)
 
-
 Tried of hand-typing types for NestJS CQRS package? We got you covered!
 
 # Usage
