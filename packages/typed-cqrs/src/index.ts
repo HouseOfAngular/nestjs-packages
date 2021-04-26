@@ -7,7 +7,7 @@ export { Query } from './query';
 import * as cqrs from '@nestjs/cqrs';
 import { Command } from './command';
 
-declare module '@nestjs/cqrs' {
+declare module '@nestjs/cqrs/dist/query-bus' {
   export interface QueryBus {
     execute<X>(query: Query<X>): Promise<X>;
   }
@@ -17,7 +17,9 @@ declare module '@nestjs/cqrs' {
   >
     ? IQueryHandler<QueryType, ResultType>
     : never;
+}
 
+declare module '@nestjs/cqrs/dist/command-bus' {
   export interface CommandBus {
     execute<X>(command: Command<X>): Promise<X>;
   }
