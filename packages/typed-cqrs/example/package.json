@@ -21,7 +21,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@nestjs-architects/typed-cqrs": "*",
+    "@nestjs-architects/typed-cqrs": "0.1.1-alpha.0",
     "@nestjs/common": "^7.6.15",
     "@nestjs/core": "^7.6.15",
     "@nestjs/cqrs": "7.0.1",
