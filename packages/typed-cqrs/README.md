@@ -35,4 +35,4 @@ As well as, results are correctly typed as well!
 
 After running `npm run build`, run `npm link` from the root directory to have it visible as globally installed package.
 
-Next, in the project you want to use it, within its root directory, run `npm link nestjs-typed-cqrs`
+Next, in the project you want to use it, within its root directory, run `npm link @nestjs-architects/typed-cqrs`
