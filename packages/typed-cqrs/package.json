@@ -30,13 +30,6 @@
   "bugs": {
     "url": "https://github.com/valueadd-poland/nestjs-packages/issues"
   },
-  "peerDependencies": {
-    "@nestjs/common": "^7.6.0",
-    "@nestjs/core": "^7.6.0",
-    "@nestjs/cqrs": "^7.0.1",
-    "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.4.0"
-  },
   "devDependencies": {
     "@nestjs/common": "^7.6.0",
     "@nestjs/core": "^7.6.0",
