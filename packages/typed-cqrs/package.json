@@ -1,6 +1,6 @@
 {
   "name": "@nestjs-architects/typed-cqrs",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Enhance the @nestjs/cqrs building blocks with auto-inferring types.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -25,6 +25,19 @@
     "email": "contact@valueadd.pl",
     "url": "https://valueadd.pl/"
   },
+  "contributors": [
+    {
+      "name": "Maciej Sikorski",
+      "email": "maciejsikorski00@gmail.com",
+      "url": "https://maciejsikorski.com"
+    },
+    {
+      "name": "Kamil Gajowy"
+    },
+    {
+      "name": "Dominik Ostrowski"
+    }
+  ],
   "license": "MIT",
   "homepage": "https://github.com/valueadd-poland/nestjs-packages",
   "bugs": {
