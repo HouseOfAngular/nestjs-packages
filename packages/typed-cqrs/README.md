@@ -7,6 +7,12 @@ Tired of hand-typing types for NestJS CQRS package? We got you covered!
 
 # Usage
 
+First install base `@nestjs/cqrs` package.
+
+```sh
+$ npm i @nestjs/cqrs
+```
+
 All you need to do, is to extend your query with type of expected response.
 
 ```typescript
