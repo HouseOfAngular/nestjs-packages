@@ -10,15 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.20.0]
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+      - name: npm i package lock
+        run: npm install --package-lock-only
       - name: npm install
-        run: npm ci && npm run lerna bootstrap
+        run: npm ci
       - name: build
         run: npm run lerna run build
 
@@ -26,13 +28,15 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.20.0]
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+      - name: npm i package lock
+        run: npm install --package-lock-only
       - name: npm install
         run: npm ci
       - name: test
@@ -42,15 +46,17 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.20.0]
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: checkout
         run: git checkout master
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+      - name: npm i package lock
+        run: npm install --package-lock-only
       - name: npm install
         run: npm ci
       - name: prettier check
