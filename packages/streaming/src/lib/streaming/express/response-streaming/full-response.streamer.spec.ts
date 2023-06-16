@@ -5,7 +5,7 @@ describe('FullResponseStreamer', () => {
   const streamData = [0, 0, 0, 0];
 
   describe('#stream', () => {
-    test('set headers and streams', async done => {
+    test('set headers and streams', async () => {
       const res: any = new ObjectWritableMock();
       res.writeHead = jest.fn();
       const streamer = new FullResponseStreamer(res);
@@ -22,11 +22,10 @@ describe('FullResponseStreamer', () => {
 
       res.on('finish', () => {
         expect(res.data).toEqual(streamData);
-        done();
       });
     });
 
-    test('set headers and streams with cache', async done => {
+    test('set headers and streams with cache', async () => {
       const res: any = new ObjectWritableMock();
       res.writeHead = jest.fn();
       const streamer = new FullResponseStreamer(res);
@@ -45,7 +44,6 @@ describe('FullResponseStreamer', () => {
 
       res.on('finish', () => {
         expect(res.data).toEqual(streamData);
-        done();
       });
     });
   });

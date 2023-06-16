@@ -1,7 +1,9 @@
 {
   branch: {
     // types of branches
-    types: ['ci', 'feature', 'bugfix', 'hotfix', 'refactor', 'release']
+    types: ['ci', 'feature', 'bugfix', 'hotfix', 'release', 'refactor'],
+    // RegExp that overrides "types" (types are ignored)
+    pattern: '(.*)'
   },
   change: {
     // max number of added lines in change request, default: -1
@@ -11,9 +13,11 @@
     // max number of edited files in change request, default: -1
     maxFiles: -1
   },
+  // all commitlint rules are supported
+  // https://github.com/conventional-changelog/commitlint/blob/master/docs/reference-rules.md
   commitlint: {
-    'body-leading-blank': [2, 'always'],
-    'footer-leading-blank': [2, 'always'],
+    'body-leading-blank': [1, 'always'],
+    'footer-leading-blank': [1, 'always'],
     'header-max-length': [2, 'always', 72],
     'body-max-line-length': [2, 'always', 72],
     'footer-max-line-length': [2, 'always', 72],
@@ -28,11 +32,14 @@
       'always',
       ['build', 'chore', 'ci', 'docs', 'deps', 'feat', 'fix', 'perf', 'refactor', 'style', 'test']
     ],
-    'scope-enum': [2, 'always', ['pdf-generator', 'release', 'streaming', 'typed-cqrs']]
+    'scope-enum': [2, 'always', ['pdf-generator', 'release', 'streaming', 'typed-cqrs']],
   },
   prettier: {
     // extensions to check with prettier
     extensionsToCheck: ['.json', '.ts', '.js', '.html', '.css', '.scss']
   },
-  nxTagsValidator: {}
+  nxTagsValidator: {
+    // ignore default tags
+    ignore: ['type:application', 'type:util', 'type:ui', 'type:data-access', 'type:resource', 'type:feature', 'scope:shared']
+  }
 }

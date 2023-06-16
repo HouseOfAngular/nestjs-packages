@@ -1,18 +1,17 @@
 import { Injectable } from '@nestjs/common';
-import * as puppeteer from 'puppeteer';
-import { Request } from 'puppeteer';
 import { Readable } from 'stream';
 import { URL } from 'url';
 import { PdfGenerationException } from '../exceptions/pdf-generation.exception';
 import { ToPdfResult } from '../interfaces/to-pdf-result.interface';
 import { ToPdfOptions } from '../interfaces/to-pdf-options.interface';
+import {launch, HTTPRequest, HTTPResponse, TimeoutError} from "puppeteer";
 
 @Injectable()
 export class PuppeteerWebPageToPdfService {
   private static readonly timeout = 20000;
 
   async toPdf(url: URL, options: ToPdfOptions): Promise<ToPdfResult> {
-    const browser = await puppeteer.launch({
+    const browser = await launch({
       args: [
         // Disable cors checks
         '--disable-web-security',
@@ -28,7 +27,7 @@ export class PuppeteerWebPageToPdfService {
       const page = await browser.newPage();
 
       await page.setRequestInterception(true);
-      page.on('request', (request: Request) => {
+      page.on('request', (request: HTTPRequest) => {
         // Do nothing in case of non-navigation requests.
         if (!request.isNavigationRequest()) {
           request.continue();
@@ -60,7 +59,7 @@ export class PuppeteerWebPageToPdfService {
 
       return { stream: Readable.from(pdf), name: `${name}.pdf` };
     } catch (e) {
-      if (e instanceof puppeteer.errors.TimeoutError) {
+      if (e instanceof TimeoutError) {
         throw new PdfGenerationException('Pdf generation timeout');
       }
       throw e;
@@ -69,7 +68,7 @@ export class PuppeteerWebPageToPdfService {
     }
   }
 
-  private async assertResponse(response: puppeteer.Response): Promise<void> {
+  private async assertResponse(response: HTTPResponse): Promise<void> {
     const statusCode = response.status();
     if (statusCode !== 200) {
       const message = (await response.json()) as string;
