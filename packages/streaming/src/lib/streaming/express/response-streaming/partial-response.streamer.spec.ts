@@ -5,7 +5,7 @@ describe('PartialResponseStreamer', () => {
   const streamData = [0, 0, 0, 0];
 
   describe('#stream', () => {
-    test('streams with end option', async done => {
+    test('streams with end option', async () => {
       const res: any = new ObjectWritableMock();
       res.writeHead = jest.fn();
       const streamer = new PartialResponseStreamer(res);
@@ -24,11 +24,10 @@ describe('PartialResponseStreamer', () => {
 
       res.on('finish', () => {
         expect(res.data).toEqual(streamData);
-        done();
       });
     });
 
-    test('streams without end option', async done => {
+    test('streams without end option', async () => {
       const res: any = new ObjectWritableMock();
       res.writeHead = jest.fn();
       const streamer = new PartialResponseStreamer(res);
@@ -47,11 +46,10 @@ describe('PartialResponseStreamer', () => {
 
       res.on('finish', () => {
         expect(res.data).toEqual(streamData);
-        done();
       });
     });
 
-    test('streams with cache', async done => {
+    test('streams with cache', async () => {
       const res: any = new ObjectWritableMock();
       res.writeHead = jest.fn();
       const streamer = new PartialResponseStreamer(res);
@@ -72,7 +70,6 @@ describe('PartialResponseStreamer', () => {
 
       res.on('finish', () => {
         expect(res.data).toEqual(streamData);
-        done();
       });
     });
   });

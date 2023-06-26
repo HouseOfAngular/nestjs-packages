@@ -7,15 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.20.0]
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+      - name: npm i package lock
+        run: npm install --package-lock-only
+      - name: npm install puppeteer
+        run: npm install -g puppeteer --unsafe-perm
       - name: npm install
-        run: npm ci && npm run lerna bootstrap
+        run: npm ci
       - name: build
         run: npm run lerna run build
 
@@ -23,13 +27,17 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.20.0]
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+      - name: npm i package lock
+        run: npm install --package-lock-only
+      - name: npm install puppeteer
+        run: npm install -g puppeteer --unsafe-perm
       - name: npm install
         run: npm ci
       - name: test
@@ -39,18 +47,30 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.20.0]
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+      - name: npm i package lock
+        run: npm install --package-lock-only
+      - name: npm install puppeteer
+        run: npm install -g puppeteer --unsafe-perm
       - name: npm install
         run: npm ci
-      - name: validate commits
-        run: node ./node_modules/@valueadd/dev validate-commit origin/master
-      - name: prettier check
-        run: node ./node_modules/@valueadd/dev prettier-check `git diff origin/master  --cached --name-only --diff-filter=AM | tr '\r\n' ','`
+      - name: Install commitlint
+        run: |
+          npm install conventional-changelog-conventionalcommits
+          npm install commitlint@latest
+      - name: Validate current commit (last commit) with commitlint
+        if: github.event_name == 'push'
+        run: npx commitlint --from HEAD~1 --to HEAD --verbose
+      - name: Validate PR commits with commitlint
+        if: github.event_name == 'pull_request'
+        run: npx commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
       - name: lint
         run: npm run lint

@@ -39,11 +39,11 @@
     "preversion": "npm run build"
   },
   "peerDependencies": {
-    "@nestjs/common": "^7.4.4"
+    "@nestjs/common": "^9.4.3"
   },
   "optionalDependencies": {
-    "@nestjs/platform-express": "^7.4.4",
-    "@nestjs/platform-fastify": "^7.4.4"
+    "@nestjs/platform-express": "^9.4.3",
+    "@nestjs/platform-fastify": "^9.4.3"
   },
   "devDependencies": {
     "stream-mock": "^2.0.5"
