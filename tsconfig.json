@@ -14,7 +14,7 @@
     "lib": ["es7"],
     "baseUrl": "./src",
     "paths": {
-      "@valueadd/*": ["./*/src"]
+      "@house-of-angular/*": ["./*/src"]
     }
   },
   "exclude": ["node_modules"]

@@ -1,7 +1,7 @@
-# @valueadd/nestjs-ng-pdf-generator
+# @house-of-angular/nestjs-ng-pdf-generator
 
-[![version](https://img.shields.io/npm/v/@valueadd/nestjs-ng-pdf-generator.svg)](https://www.npmjs.com/package/@valueadd/nestjs-ng-pdf-generator)
-[![downloads](https://img.shields.io/npm/dt/@valueadd/nestjs-ng-pdf-generator.svg)](https://www.npmjs.com/package/@valueadd/nestjs-ng-pdf-generator)
+[![version](https://img.shields.io/npm/v/@house-of-angular/nestjs-ng-pdf-generator.svg)](https://www.npmjs.com/package/@house-of-angular/nestjs-ng-pdf-generator)
+[![downloads](https://img.shields.io/npm/dt/@house-of-angular/nestjs-ng-pdf-generator.svg)](https://www.npmjs.com/package/@house-of-angular/nestjs-ng-pdf-generator)
 
 > Extension to the [@nestjs/ng-universal](https://github.com/nestjs/ng-universal) that adds the generic endpoint 'pdf-generator' that will return Angular view converted to the pdf.
 > GET request to the pdf-generator/:any-path will open your app at the "any-path" and trigger the "to pdf" browser action.

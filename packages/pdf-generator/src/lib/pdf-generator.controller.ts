@@ -2,7 +2,7 @@ import { Controller, Get, Inject, Req, Res } from '@nestjs/common';
 import { HttpAdapterHost } from '@nestjs/core';
 import { Request, Response } from 'express';
 import { PuppeteerWebPageToPdfService } from './puppeteer-web-page-to-pdf/puppeteer-web-page-to-pdf.service';
-import { DownloadProviderFactory, downloadProviderFactoryToken } from '@valueadd/nestjs-streaming';
+import { DownloadProviderFactory, downloadProviderFactoryToken } from '@house-of-angular/nestjs-streaming';
 import { URL } from 'url';
 import { PdfGeneratorOptions } from './interfaces/pdf-generator-options.interface';
 import { PDF_GENERATOR_OPTIONS } from './injection-tokens/pdf-generator-options.injection-token';
