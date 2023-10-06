@@ -1,13 +1,13 @@
-# @valueadd/nestjs-streaming
+# @house-of-angular/nestjs-streaming
 
-[![version](https://img.shields.io/npm/v/@valueadd/nestjs-streaming.svg)](https://www.npmjs.com/package/@valueadd/nestjs-streaming)
-[![downloads](https://img.shields.io/npm/dt/@valueadd/nestjs-streaming.svg)](https://www.npmjs.com/package/@valueadd/nestjs-streaming)
+[![version](https://img.shields.io/npm/v/@house-of-angular/nestjs-streaming.svg)](https://www.npmjs.com/package/@house-of-angular/nestjs-streaming)
+[![downloads](https://img.shields.io/npm/dt/@house-of-angular/nestjs-streaming.svg)](https://www.npmjs.com/package/@house-of-angular/nestjs-streaming)
 
 Useful providers that allows working with streaming like responses
 
 ## Installation
 
-`npm install --save-dev @valueadd/nestjs-streaming`
+`npm install --save-dev @house-of-angular/nestjs-streaming`
 
 ## Available modules
 
@@ -31,7 +31,7 @@ import {
   ResponseStreamerFactory,
   responseStreamerFactoryToken,
   StreamingType
-} from '@valueadd/nestjs-streaming';
+} from '@house-of-angular/nestjs-streaming';
 
 @Controller()
 export class AppController {
@@ -55,7 +55,7 @@ export class AppController {
 
 ```ts
 import { Module } from '@nestjs/common';
-import { DownloadExpressModule } from '@valueadd/nestjs-streaming';
+import { DownloadExpressModule } from '@house-of-angular/nestjs-streaming';
 import { AppController } from './app.controller';
 
 @Module({

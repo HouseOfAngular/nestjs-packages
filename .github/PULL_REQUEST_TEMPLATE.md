@@ -2,7 +2,7 @@
 
 Please check if your PR fulfills the following requirements:
 
-- [ ] The commit message follows our guidelines: https://github.com/valueadd-poland/nestjs-packages/blob/master/CONTRIBUTING.md#git-guidelines
+- [ ] The commit message follows our guidelines: https://github.com/HouseOfAngular/nestjs-packages/blob/master/CONTRIBUTING.md#git-guidelines
 - [ ] Tests for the changes have been added (for bug fixes / features)
 
 ## PR Type
